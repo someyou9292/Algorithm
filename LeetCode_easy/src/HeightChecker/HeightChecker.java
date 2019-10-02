@@ -22,18 +22,6 @@ class Solution {
 		}
 		Arrays.sort(sortedHeights);
 		
-		System.out.println("정렬된 배열");
-		for(int i=0; i<sortedHeights.length;i++) {
-			System.out.print(sortedHeights[i] + " ");
-		}
-		System.out.println();
-		
-		System.out.println("원래의 배열");
-		for(int i=0; i<heights.length;i++) {
-			System.out.print(heights[i] + " ");
-		}
-		System.out.println();
-
 		int count = 0;
 		for (int i = 0; i < heights.length; i++) {
 			if(heights[i] != sortedHeights[i]) {
