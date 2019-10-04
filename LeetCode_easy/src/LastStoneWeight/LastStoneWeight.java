@@ -17,6 +17,7 @@ import java.util.List;
  마지막 남은 돌의 무게를 반환하시오.
  * */
 
+// 효율 96.33% 
 class Solution {
 	public int lastStoneWeight(int[] stones) {
 		if (stones.length == 1) {
@@ -39,10 +40,6 @@ class Solution {
 				stones[length - 2] = 0;
 				count--;
 			}
-		}
-
-		for (int i = 0; i < stones.length; i++) {
-			System.out.println(stones[i]);
 		}
 
 		return stones[stones.length - 1];
