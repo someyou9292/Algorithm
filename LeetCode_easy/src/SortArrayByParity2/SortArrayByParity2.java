@@ -14,6 +14,7 @@ Output: [4,5,2,7]
 Explanation: [4,7,2,5], [2,5,4,7], [2,7,4,5] would also have been accepted.
  * */
 
+// È¿À² 97.71% good
 class Solution {
 	public int[] sortArrayByParityII(int[] A) {
 		int[] result = new int[A.length];
@@ -31,9 +32,6 @@ class Solution {
 			}
 		}
 
-		for (int i = 0; i < result.length; i++) {
-			System.out.println(result[i]);
-		}
 		return result;
 	}
 }
