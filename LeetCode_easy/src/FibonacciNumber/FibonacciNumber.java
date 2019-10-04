@@ -1,5 +1,7 @@
 package FibonacciNumber;
 
+import java.util.HashMap;
+
 /*
  * 피보나치 수열을 구하시오.
 
@@ -20,21 +22,23 @@ Explanation: F(4) = F(3) + F(2) = 2 + 1 = 3.
  * 
  * */
 
+// 효율 100%    굳
 class Solution {
-    public int fib(int N) {
-    	if(N == 0) {
-    		return 0;
-    	}
-    	if(N == 1) {
-    		return 1;
-    	}
-    	int result = 0;    	
-    	if(N > 1) {
-    		result = fib(N-1) + fib(N-2);
-    	}
-    	
-    	return result;
-    }
+	public int fib(int N) {
+		int result = 0;
+
+		HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+		map.put(0, 0);
+		map.put(1, 1);
+
+		if (N > 1) {
+			for(int i=2; i<=N; i++) {
+				map.put(i,map.get(i-1) + map.get(i-2));
+			}
+		}
+		
+		return map.get(N);
+	}
 }
 
 public class FibonacciNumber {
@@ -44,3 +48,21 @@ public class FibonacciNumber {
 		System.out.println(st.fib(N));
 	}
 }
+
+// 효율 26.11%   더 올리자
+//class Solution {
+//	public int fib(int N) {
+//		if (N == 0) {
+//			return 0;
+//		}
+//		if (N == 1) {
+//			return 1;
+//		}
+//		int result = 0;
+//		if (N > 1) {
+//			result = fib(N - 1) + fib(N - 2);
+//		}
+//
+//		return result;
+//	}
+//}
