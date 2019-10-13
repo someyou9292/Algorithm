@@ -3,7 +3,6 @@ package GoatLatin;
 import java.util.ArrayList;
 import java.util.List;
 
-
 // È¿À² 94.51% good
 class Solution {
 	public String toGoatLatin(String S) {
@@ -12,8 +11,8 @@ class Solution {
 		String append = "maa";
 		String result = "";
 		for (int i = 0; i < words.length; i++) {
-            
-            if (i > 0) {
+
+			if (i > 0) {
 				result += " ";
 			}
 			char ch = words[i].charAt(0);
@@ -32,18 +31,21 @@ class Solution {
 				append += 'a';
 				break;
 			default:
-				if(words[i].length()==1) {
+				if (words[i].length() == 1) {
 					result += words[i] + append;
-                    append += 'a';
-				}else {
-					result += words[i].substring(1,words[i].length()-1) + words[i].charAt(words[i].length()-1) + words[i].charAt(0) + append;
 					append += 'a';
-                    
+				} else {
+					result += words[i].substring(1, words[i].length() - 1) + words[i].charAt(words[i].length() - 1)
+							+ words[i].charAt(0) + append;
+					append += 'a';
+
 				}
 				break;
 			}
 		}
 
+		System.out.println(result);
+		
 		return result;
 	}
 }
