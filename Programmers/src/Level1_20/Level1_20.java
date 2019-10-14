@@ -23,7 +23,7 @@ class Solution {
 			count++;
 		}	
 		
-		System.out.println(answer);
+//		System.out.println(answer);
 
 		return answer;
 	}
@@ -36,39 +36,3 @@ public class Level1_20 {
 		st.solution(s);
 	}
 }
-
-// 좀 더 간단하게 줄여보자
-//class Solution {
-//	public String solution(String s) {
-//		String answer = "";
-//		char[] arr = new char[s.length()];
-//		
-//		for(int i=0; i<s.length();i++) {
-//			arr[i] = s.toUpperCase().charAt(i);
-//		}
-//	
-//		boolean isOdd = false;
-//		int count = 0;
-//		for (int i = 0; i < arr.length; i++) {
-//			if(arr[i] == ' ') {
-//				count = 0;
-//				answer += arr[i];
-//				continue;
-//			}
-//			if (count % 2 == 1) {
-//				isOdd = true;
-//			}else {
-//				isOdd = false;
-//			}
-//			if (isOdd == true) {
-//				arr[i] += 32 ;
-//			}
-//			
-//			answer += arr[i];
-//			count++;
-//		}
-//		
-//
-//		return answer;
-//	}
-//}
