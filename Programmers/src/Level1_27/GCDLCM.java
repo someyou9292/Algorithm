@@ -1,4 +1,4 @@
-package GCDLCM;
+package Level1_27;
 
 class Solution {
 	public int[] solution(int n, int m) {

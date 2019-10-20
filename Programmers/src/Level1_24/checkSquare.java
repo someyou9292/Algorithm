@@ -1,4 +1,4 @@
-package checkSquar;
+package Level1_24;
 
 import java.util.HashMap;
 
