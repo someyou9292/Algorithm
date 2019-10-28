@@ -13,6 +13,7 @@ class Solution {
 			answer.append(" ");
 		}
 		
+		// .trim() -> 전후 공백을 없애주는 메서드
 		return answer.toString().trim();
 	}
 }
